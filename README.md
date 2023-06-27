@@ -2,6 +2,35 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Technoligies & Tools
+* VSCode
+* JavaScript
+* React
+* TailwindCss
+
+## Some Steps / Terminal Commands
+* Create the project folder locally
+* cd to your project
+* npm create react-app . (This will create the necessary files and folder for the project)
+* npm install -D tailwindcss postcss-cli autoprefixer
+* create tailwind.js (project level)
+* create a folder: assest
+* create 2 files in assest folder: main.css and tailwind.css
+* npx tailwind init tailwind.js --full
+* create a file (project level): touch postcss.config.js
+* update package.json file
+    "scripts": {
+      "start": "npm run watch:css && react-scripts start",
+      "build": "npm run buld:css && react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+      "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    }
+ * npm start. After this command main.css should be filled automatically   
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -45,26 +74,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
